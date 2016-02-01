@@ -5,7 +5,7 @@
 \graphicspath{ {images/} }
 \begin{document}
 
-\section {The Baisc HTTP GET / Responce Questions}
+\section {The Basic HTTP GET / Response Questions}
 \includegraphics[width=\textwidth]{SimpleHTTPGet}\\
 \includegraphics[width=\textwidth]{SimpleHTTPOk}\\\\
 \begin{itemize}
@@ -18,16 +18,16 @@
   \item By inspecting the raw data displayed in the packet-listing window I did not see any additional headers
 \end{itemize}
 
-\section {The HTTP Conditional Get / Responce Questions}
+\section {The HTTP Conditional Get / Response Questions}
 \includegraphics[width=\textwidth]{HTTPConditionalGet}\\
 \includegraphics[width=\textwidth]{HTTPConditionalOk}\\
 \includegraphics[width=\textwidth]{HTTPConditional2Get}\\
 \includegraphics[width=\textwidth]{HTTPConditionalNotModified}\\
 \begin{itemize}
   \item In the first contents of the HTTP GET request from the browser there is not an IF-MODIFIED-SINCE line in the packet
-  \item The server explicitly returned a file, this can be seen in the HTTP OK responce since the server sent a packet of length 371 bytes
+  \item The server explicitly returned a file, this can be seen in the HTTP OK response since the server sent a packet of length 371 bytes
   \item The second contents of the HTTP GET request from the browser there is an IF-MODIFIED-SINCE line in the packet. The information that follows the IF-MODIFIED-SINCE header is : Sun, 31 Jan 2016 06:59:02 GMT
-  \item The status code and phrase of the responce to the second HTTP Get is 304 Not Modified. The server did not explicitly return the contents of the file as it did not send anything other than headder information in the packet
+  \item The status code and phrase of the response to the second HTTP Get is 304 Not Modified. The server did not explicitly return the contents of the file as it did not send anything other than header information in the packet
 \end{itemize}
 
 \section {Retrieving Long Documents Questions}
@@ -37,8 +37,8 @@
 \begin{itemize}
   \item The browser only sent one HTTP GET request. The packet number that contains the GET message is 6.
   \item The packet number that contains the status code and trace for the HTTP GET request was 13
-  \item The status code and phrase in the HTTP GET responce was 200 OK
-  \item The amount of TCP segments needed to carry the single HTTP responce and the text of the bill of rights were 3 segments at 1374 bytes per TCP segment
+  \item The status code and phrase in the HTTP GET response was 200 OK
+  \item The amount of TCP segments needed to carry the single HTTP response and the text of the bill of rights were 3 segments at 1374 bytes per TCP segment
 \end{itemize}
 
 \section {HTML Documents with Embedded Objects Questions}
@@ -46,14 +46,14 @@
 \includegraphics[width=\textwidth]{HTMLDocumentsWithEmbeddedObjectsGetJPG}\\\\
 \begin{itemize}
   \item There were a total of 4 HTTP GET requests from the browser. These Get requests were to gaia.cs.umass.edu, www.pearsonhighered.com, manic.cs.umass.edu/, caite.cs.umass.edu/
-  \item The browser appeared to download the images in parallel as there were two GET requests and then a responce from the server
+  \item The browser appeared to download the images in parallel as there were two GET requests and then a response from the server
 \end{itemize}
 
 \section {HTTP Authentication Questions}
 \includegraphics[width=\textwidth]{HTTPAuthenticationReply}\\
 \includegraphics[width=\textwidth]{HTTPAuthenticationGet}\\
 \begin{itemize}
-  \item The servers responce to the first HTTP GET is 401 Unauthorized
+  \item The servers response to the first HTTP GET is 401 Unauthorized
   \item With the second HTTP GET request from the browser the new field in the message is Authorization with the username and password displayed
 \end{itemize}
 \end{document}
